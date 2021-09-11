@@ -10,9 +10,11 @@ namespace leave_management.Areas.Identity.Pages.Account.Manage
     public class PersonalDataModel : PageModel
     {
         private readonly ILogger<PersonalDataModel> _logger;
+        private readonly UserManager<Employee> _userManager;
 
         public PersonalDataModel(
-            ILogger<PersonalDataModel> logger)
+            ILogger<PersonalDataModel> logger,
+            UserManager<Employee> userManager)
         {
             _userManager = userManager;
             _logger = logger;
