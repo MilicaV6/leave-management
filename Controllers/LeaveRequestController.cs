@@ -229,7 +229,7 @@ namespace leave_management.Controllers
                 await _unitOfWork.LeaveRequests.Create(leaveRequest);
                 await _unitOfWork.Save();
 
-                await _emailSender.SendEmailAsync("admin@localhost.com", "New Leave Request", $"Please review this leave request. <a href='UrlOfApp/{leaveRequest.Id}'>Click Here</a>");
+           //     await _emailSender.SendEmailAsync("admin@localhost.com", "New Leave Request", $"Please review this leave request. <a href='UrlOfApp/{leaveRequest.Id}'>Click Here</a>");
 
                 return RedirectToAction("MyLeave");
             }
